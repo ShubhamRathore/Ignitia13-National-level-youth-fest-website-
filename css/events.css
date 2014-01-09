@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+.titles{
+	border:#fff medium solid;
+	margin:1%;
+	
+	opacity:0.7;
+	z-index:2;
+}
+
+.brainjab{
+	border:#666 thick solid;
+	margin:2%;
+}
+
+.crdt{
+	border:#666 thick solid;
+	margin:2%;
+}
+
+figure {
+	
+	float: left;
+	overflow: hidden;
+	margin: 0 20px 20px 0; 
+}
+	 
+figcaption { 
+	z-index:1200;
+  	position: relative; 
+	background: black; 
+	background: rgba(0,0,0,0.75); 
+	color: white; 
+	padding: 10px 20px; 
+	opacity: 0; 
+	z-index:100;
+	top:5%;
+	left:10%;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 01s ease; 
+	-o-transition: all 01s ease;
+}
+  
+  figure:hover figcaption {
+	  position:relative;
+	  left:50%;
+	  top:70%;
+	  z-index:100;
+  	  opacity: 1; 
+}
+  
+

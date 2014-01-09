@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>Thumbnail Gallery with transparent fading caption</title>
+<script src="js/jquery-1.3.1.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	//move the image in pixel
+	var move = -15;
+	
+	//zoom percentage, 1.2 =120%
+	var zoom = 1.2;
+
+	//On mouse over those thumbnail
+	$('.item').hover(function() {
+		
+		//Set the width and height according to the zoom percentage
+		width = $('.item').width() * zoom;
+		height = $('.item').height() * zoom;
+		
+		//Move and zoom the image
+		$(this).find('img').stop(false,true).animate({'width':width, 'height':height, 'top':move, 'left':move}, {duration:200});
+		
+		//Display the caption
+		$(this).find('div.caption').stop(false,true).fadeIn(200);
+	},
+	function() {
+		//Reset the image
+		$(this).find('img').stop(false,true).animate({'width':$('.item').width(), 'height':$('.item').height(), 'top':'0', 'left':'0'}, {duration:100});	
+
+		//Hide the caption
+		$(this).find('div.caption').stop(false,true).fadeOut(200);
+	});
+
+});
+
+</script>
+<style>
+body {
+	font-family:arial;	
+}
+
+.item {
+	width:250px;
+	height:175px;	
+	border:4px solid #222;	
+	margin:5px 5px 5px 0;
+	
+	/* required to hide the image after resized */
+	overflow:hidden;
+	
+	/* for child absolute position */
+	position:relative;
+	
+	/* display div in line */
+	float:left;
+}
+
+.item .caption {
+	width:250px;
+	height:175px;
+	background:#000;
+	color:#fff;
+	font-weight:bold;
+		
+	/* fix it at the bottom */
+	position:absolute;
+	left:0;
+
+	/* hide it by default */
+	display:none;
+
+	/* opacity setting */
+	filter:alpha(opacity=80);    /* ie  */
+	-moz-opacity:0.8;    /* old mozilla browser like netscape  */
+	-khtml-opacity: 0.8;    /* for really really old safari */  
+	opacity: 0.8;    /* css standard, currently it works in most modern browsers like firefox,  */
+
+}
+
+.item .caption a {
+	text-decoration:none;
+	color:#0cc7dd;
+	font-size:16px;	
+	
+	/* add spacing and make the whole row clickable*/
+	padding:5px;
+	display:block;
+}
+
+.item .caption p {
+	padding:5px;	
+	margin:0;
+	font-size:10px;
+}
+
+img {
+	/* allow javascript moves the img position*/
+	border-style: none;
+        border-color: inherit;
+        border-width: 0;
+        position:absolute;
+        top: 0px;
+        right: -125px;
+        width: 375px;
+    }
+
+.clear {
+	clear:both;	
+}
+</style>
+</head>
+
+<body>
+<br><br><br>
+<table align="center">
+<tr>
+<td align="center" width="200"><b><font size="5">Pronite-I</font></b>
+<div class="item" align="center">
+	<a href="#"><img src="images\pronites\1.jpg" alt="Cycliner" title="" width="250" height="175"/></a>
+	<div class="caption">
+		<a href=""><center>Kavi Sammelan<br>21-feb</center></a>
+		<center><p>WAh.. WAh.. WAh....</p></center>
+	</div>
+</div>
+</td>
+<td align="center" width="200"><br><br><br><br>
+<b><font size="5">Pronite-II</font></b>
+<div class="item"align="center">
+	<a href="#"><img src="images\pronites\fashionista.png" alt="Banana Moon" 
+        title="" height="175"/></a>
+	<div class="caption">
+		<a href=""><center>Moves n Rythm+Fashionsta<br>22-feb</center></a>
+		<center><p>Ishtyle me rehne ka</p></center>	</div>
+</div>
+</td>
+<td align="center" width="200"><br><br><br><br><br><br><br><br>
+<b><font size="5"> Pronite-III</font></b>
+<div class="item"align="center">
+	<a href="#"><img src="images\pronites\2.jpg" alt="BlueBuck" title="" 
+        height="175" align="middle" dir="rtl"/></a>
+	<div class="caption">
+		<a href="Automnrock.html"><center>Automn Rock<br>23-feb</center></a>
+		<center><p>Its time to Rock....</p></center>
+	</div>
+</div>
+</td>
+
+
+
+
+
+
+</body>
+
+
+</html>

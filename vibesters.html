@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Direction-Aware Hover Effect with CSS3 and jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Direction-Aware Hover Effect with CSS3 and jQuery" />
+        <meta name="keywords" content="hover, css3, jquery, effect, direction, aware, depending, thumbnails" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="js/modernizr.custom.97074.js"></script>
+		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
+    </head>
+    <body style="overflow:hidden;">
+       	<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="">
+							<img src="images/vibesters/antakshari.jpg" height="150" weight="150"/>
+							<div><span>Antakshari</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/vibesters/dubstep.jpg"  height="150" weight="150"/>
+							<div><span>Dubstep</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/vibesters/dumb_charades.jpg" height="150" weight="150" />
+							<div><span>Dumb Charades</span></div>
+						</a>
+					</li>
+                                        <br><br><br><br><br><br><br><br><br><br><br>
+					<li>
+						<a href="">
+							<img src="images/vibesters/gitti_phodh.jpg" height="150" weight="150" />
+							<div><span>Gitti Phodh</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/vibesters/musical_chair.jpg" height="150" weight="150" />
+							<div><span>Musical Chair</span></div>
+						</a>
+					</li>
+                    <li>
+						<a href="">
+							<img src="images/vibesters/rjhunt.jpg"  height="150" weight="150"/>
+							<div><span>RJ Hunt</span></div>
+						</a>
+					</li>
+                                        <li>
+						<a href="">
+							<img src="images/vibesters/tugofwar.jpg" height="150" weight="150" />
+							<div><span>Tug Of War</span></div>
+						</a>
+					</li>
+                              <li>
+						<a href="">
+							<img src="images/vibesters/roadies.jpg" height="150" weight="150" />
+							<div><span>Roadies</span></div>
+						</a>
+					</li>
+									</ul>
+			</section>
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+					hoverDelay : 50,
+					inverse : true
+				}); } );
+
+			});
+		</script>
+    </body>
+</html>

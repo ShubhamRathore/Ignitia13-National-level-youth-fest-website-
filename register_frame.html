@@ -1,0 +1,104 @@
+<html>
+<head>
+<script>
+function validateForm()
+{
+var x1=document.forms["myForm"]["t1"].value;
+if (x1==null || x1=="")
+  {
+  xl1="First name must be filled out";
+  document.forms["myForm"]["l1"].value=xl1;
+  return false;
+  }
+var x2=document.forms["myForm"]["t2"].value;
+if (x2==null || x2=="")
+  {
+  xl1="college name must be filled out";
+  document.forms["myForm"]["l1"].value=xl1;
+  
+  return false;
+  }
+var x3=document.forms["myForm"]["t3"].value;
+if (x3==null || x3=="")
+  {
+  xl1="branch name must be filled out";
+  document.forms["myForm"]["l1"].value=xl1;
+  
+  return false;
+  }
+var x4=document.forms["myForm"]["t3"].value
+if(x3=="B.tech."||x3=="b.tech."||x3=="btech")
+{
+
+  xl1="branch name must be filled out";
+  document.forms["myForm"]["l1"].value=xl1;
+}
+var x5=document.forms["myForm"]["t5"].value;
+if (x5==null || x5=="")
+  {
+  xl1="E-Mail ID must be filled out";
+  document.forms["myForm"]["l1"].value=xl1;
+  
+  return false;
+  }
+var x15=document.forms["myForm"]["t5"].value;
+var atpos=x15.indexOf("@");
+var dotpos=x15.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x15.length)
+  {
+  var xl1="Not a valid e-mail address"
+ document.forms["myForm"]["l1"].value=xl1;
+  return false;
+  }
+var x6=document.forms["myForm"]["t6"].value;
+if (x6==null || x6=="")
+  {
+  var xl1="contact no. must be filled out";
+document.forms["myForm"]["l1"].value=xl1;
+  return false;
+  }
+}
+</script>
+
+</head>
+<body>
+<center>
+<fieldset style="width:334px">
+<legend>REGISTER</legend>
+
+<form name="myForm" action="events-reg.html" onSubmit="return validateForm()" method="post">
+<table>
+<tr>
+<input type="label" name="l1" value="" size=40></tr>
+<tr>
+<td>
+Full Name:</td><td>
+<input type="text" size=20 name="t1"><br/></td></tr>
+<tr><td>
+College:</td><td>
+<input type="text" size=20 name="t2"><br/></td></tr><tr>
+<td>
+Course:</td><td>
+<input type="text" size=20 name="t3"><br/></td></tr>
+<tr>
+<td>
+Branch(in case of b.tech. only):</td><td>
+<input type="text" size=20 name="t4"><br/></td></tr>
+<tr><td>E-Mail:
+</td><td><input type="text" size=20 name="t5"><br/></td></tr>
+<tr>
+<td>
+Contact:</td>
+<td>
+<input type="text" size=20 name="t6"><br/></td></tr>
+</table><center>
+<input type="submit" size=4 value="click to select events"></center>
+
+
+</form>
+
+
+
+</center>
+</body>
+</html>

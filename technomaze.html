@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Direction-Aware Hover Effect with CSS3 and jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Direction-Aware Hover Effect with CSS3 and jQuery" />
+        <meta name="keywords" content="hover, css3, jquery, effect, direction, aware, depending, thumbnails" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="js/modernizr.custom.97074.js"></script>
+		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
+    </head>
+    <body style="overflow:hidden;">
+        	<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="">
+							<img src="images/technomaze/autocaddiction.jpg" height="150" width="150" />
+							<div><span>Autocaddiction</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/technomaze/bits n bytes.jpg" height="150" width="150"/>
+							<div><span>Bits N Bytes</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/technomaze/circuitamber.jpg" height="150" width="150"/>
+							<div><span>Circuitamber</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/technomaze/complay.jpg" height="150" width="150"/>
+							<div><span>Complay</span></div>
+						</a>
+					</li>
+                     <br><br><br><br><br><br><br><br><br><br><br>
+					<li>
+						<a href="">
+							<img src="images/technomaze/crack_d_code.jpg" height="150" width="150"/>
+							<div><span>Crack D Code</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/technomaze/programmers_paradise.jpg" height="150" width="150" />
+							<div><span>Programmers Paradise</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/technomaze/sea of c.jpg" height="150" width="150"/>
+							<div><span>Sea Of Sea</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/technomaze/softoblaze.jpg" height="150" width="150"/>
+							<div><span>Softoblaze</span></div>
+						</a>
+					</li>
+									</ul>
+			</section>
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+					hoverDelay : 75
+				}); } );
+
+			});
+		</script>
+    </body>
+</html>

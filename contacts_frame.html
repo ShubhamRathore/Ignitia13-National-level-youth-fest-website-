@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/frame.css" type="text/css">
+
+<script type="text/javascript" >
+var img=new Array();
+var flag=0, c=0;
+
+preload(['images/contacts/ashutosh.jpg','images/contacts/snehil.jpg','images/contacts/anuj.jpg','images/contacts/sid.jpg','images/contacts/gaurav.jpg','images/contacts/shashank.jpg','images/contacts/abhijeet.jpg','images/contacts/rahul.jpg',	'images/contacts/shubhansh.jpg','images/contacts/arpit.jpg','images/contacts/durgesh.jpg']); 		
+
+
+function preload(arr){
+    for (var i=0; i<arr.length; i++){
+		img[i]=arr[i];
+		c++;
+
+    
+		
+    }
+}
+
+function change_data(name, num){
+	document.getElementById('contact_img').src=name;
+	document.getElementById('phone').innerHTML=num;
+	}
+	
+function preloader_hide(){
+if(c==11){
+document.getElementById("container").style.display="block";
+document.getElementById("preloader").style.display="none";
+}
+}
+
+</script>
+</head>
+
+<body onLoad="preloader_hide()">
+<div id="preloader">
+  <img  id="ig_home_bar" src="images/frame_loader.gif" width="256" height="14"  style="position:fixed; bottom:20%; left:0%; width:100%;"/>
+  <p style="position:absolute;color:#F93; left:10%; bottom:17%;z-index:55;">Loading...</p>
+</div>
+
+<img src="images/contacts/ahutosh.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/snehil.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/anuj.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/sid.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/gaurav.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/shashank.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/abhijeet.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/rahul.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/shubhansh.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/arpit.jpg" width="1" height="1" style="display:none;"><img src="images/contacts/durgesh.jpg" width="1" height="1" style="display:none;">
+
+
+<div id="container"  class="container" style="margin:5%; display:none;">
+<!--container begins-->
+<div onMouseOver="change_data(img[0],'+91 9935583578')">
+<div class="con_tab" style="left:10%; top:3%;"><strong>President</strong></div>
+<p style="left:32%; top:3%;"><strong>Ashutosh Pandey</strong>:&nbsp;&nbsp;ashu22892@gmail.com</p>
+</div>
+
+<div onMouseOver="change_data(img[1],'+91 9670389756')">
+<div class="con_tab" style="left:16%; top:12%;"><strong>Vice-President</strong></div>
+<p style="left:38%; top:12%;"><strong>Snehil Singh</strong>:&nbsp;&nbsp;snehil2591@hotmail.com</p>
+</div>
+
+<div onMouseOver="change_data(img[2],'+91 9044511918')">
+<div class="con_tab" style="left:10%; top:21%;"><strong>Managers, Events</strong></div>
+<p style="left:32%; top:21%;"><strong>Anuj Batheja</strong>:&nbsp;&nbsp;batheja.anuj24@gmail.com</p>
+</div>
+<div onMouseOver="change_data(img[3],'+91 9044911246')">
+<p style="left:37%; top:27%;"><strong>Siddharth Singh</strong>:&nbsp;&nbsp;schauhan54@gmail.com</p>
+</div>
+
+<div onMouseOver="change_data(img[4],'+91 8808888866')">
+<div class="con_tab" style="left:16%; top:36%;"><strong>Sponsorship & Marketing</strong></div>
+<p style="left:38%; top:36%;"><strong>Gaurav Tandon</strong>:&nbsp;&nbsp;gauravtandon92@yahoo.com</p>
+</div>
+<div onMouseOver="change_data(img[5],'+91 9044911246')">
+<p style="left:43%; top:42%;"><strong>Shashank Gupta</strong>:&nbsp;&nbsp;shashank27071992@gmail.com</p>
+</div>
+
+<div onMouseOver="change_data(img[6],'+91 8543984774')">
+<div class="con_tab" style="left:10%; top:51%;"><strong>Head, Promotions</strong></div>
+<p style="left:32%; top:51%;"><strong>Abhijeet Jaiswaal</strong>:&nbsp;&nbsp;abhijeetjaiswal329@gmail.com</p>
+</div>
+
+<div onMouseOver="change_data(img[7],'+91 9935583578')">
+<div class="con_tab" style="left:16%; top:59%;"><strong>Manager, Pronites</strong></div>
+<p style="left:38%; top:59%;"><strong>Rahul Tripathi</strong>:&nbsp;&nbsp;rahul.psit.ec@gmail.com</p>
+</div>
+
+<div onMouseOver="change_data(img[8],'+91 8896148267')">
+<div class="con_tab" style="left:10%; top:69%;"><strong>Designing, Web</strong></div>
+<p style="left:32%; top:69%;"><strong>Shubhansh Sahai</strong>:&nbsp;&nbsp;mail.shubhansh@gmail.com</p>
+</div>
+<div onMouseOver="change_data(img[9],'+91 7599328418')">
+<p style="left:37%; top:75%;"><strong>Arpit Goyal</strong>:&nbsp;&nbsp;arpit682@gmail.com</p>
+</div>
+<div onMouseOver="change_data(img[10],'+91 9935583578')">
+<div class="con_tab" style="left:16%; top:84%;"><strong>Designing, Graphics</strong></div>
+<p style="left:38%; top:84%;"><strong>Durgesh Gupta</strong>:&nbsp;&nbsp;durgeshup32@gmail.com</p>
+</div>
+
+<div id="con_container">
+  <img  id="contact_img" src="images/contacts/ashutosh.jpg" width="130" height="130"></div>
+  <p style="right:18%; bottom:4%;"><strong>Phone:</strong></p>
+  <strong><p  id="phone" style="right:11%; bottom:0%;">+91 9935583578</p></strong>
+<!--container ends-->
+</div>
+
+</body>
+</html>
